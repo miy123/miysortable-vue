@@ -15,6 +15,8 @@ const directive = {
         const newb = document.createElement("b");
         el.appendChild(newb);
         el.addEventListener('click', () => {
+            if (vnode.context.sortableMaxIndex === undefined)
+                vnode.context.sortableMaxIndex = 0;
             if (binding.value === null || binding.value === undefined) {
                 callExpressionString(vnode.context, binding.expression, descValue);
                 binding.value = descValue;

@@ -1,0 +1,22 @@
+{
+  "name": "miysortable-vue",
+  "version": "1.1.0",
+  "description": "sortable in vue",
+  "main": "miysortable-vue/src/release.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miy123/miysortable-vue.git"
+  },
+  "keywords": [
+    "sortable-vue"
+  ],
+  "author": "miy123",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miy123/miysortable-vue/issues"
+  },
+  "homepage": "https://github.com/miy123/miysortable-vue#readme"
+}

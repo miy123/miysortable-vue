@@ -27,13 +27,13 @@ const sortHelper = function (list, sortObj) {
         const keys = Object.keys(sortObj);
         let sortR = 0;
         keys.forEach(x => {
-            if (sortObj[x] === sortableEnum.desc.title || sortObj[x] === sortableEnum.desc.value) {
+            if (sortObj[x].value === sortableEnum.desc.title || sortObj[x].value === sortableEnum.desc.value) {
                 const result = sortDesc(a, b, x);
                 if (result !== 0) {
                     sortR = result;
                     return;
                 }
-            } else if (sortObj[x] === sortableEnum.asc.title || sortObj[x] === sortableEnum.asc.value) {
+            } else if (sortObj[x].value === sortableEnum.asc.title || sortObj[x].value === sortableEnum.asc.value) {
                 const result = sortAsc(a, b, x);
                 if (result !== 0) {
                     sortR = result;
