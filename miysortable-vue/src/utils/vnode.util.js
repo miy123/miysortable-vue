@@ -1,4 +1,4 @@
-function callExpressionString(callObject, expressionString, assignValue) {
+function callExpressionString(callObject, expressionString, assignValue, tooltipElement) {
     const expressionArray = expressionString.split('.');
     expressionArray.reduce((a, b) => {
         if (b === expressionArray[expressionArray.length - 1]) {
@@ -11,6 +11,9 @@ function callExpressionString(callObject, expressionString, assignValue) {
                     value: assignValue,
                     index: callObject.sortableMaxIndex,
                 };
+
+                // 序列提示氣泡
+                tooltipElement.innerText = callObject.sortableMaxIndex;
                 callObject.sortableMaxIndex++;
             }
         }

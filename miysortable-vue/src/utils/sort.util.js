@@ -27,6 +27,7 @@ const sortHelper = function (list, sortObj) {
         const keys = Object.keys(sortObj);
         let sortR = 0;
         keys.forEach(x => {
+            if(!sortObj[x]) return;
             if (sortObj[x].value === sortableEnum.desc.title || sortObj[x].value === sortableEnum.desc.value) {
                 const result = sortDesc(a, b, x);
                 if (result !== 0) {
