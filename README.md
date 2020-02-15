@@ -51,7 +51,7 @@ Set data you want to save on, and method will be call
   },
   methods: {
     search() {
-      // dosomething...
+      // send this.sort to backend...
     }
   }
 ```
@@ -97,7 +97,7 @@ custom style of arrow and tooltip
 }
 ```
 
-data format
+format of transfer data
 ```
 sort:{
  name: {value: "desc", index: 0}
