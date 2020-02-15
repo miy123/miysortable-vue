@@ -36,7 +36,7 @@ Add directives in your element
 #### {methodName}：The method will be call, after process finish.
 #### {dataName}：The object in data you set.
 #### tooltip：If you want show the tooltip of sort index, add this.
-#### enum：The sort description will save int, if not save on string(desc/asc).
+#### enum：The sort description will save int, if not ,save on string(desc/asc).
 
 ### Sample
 Set data you want to save on, and method will be call
