@@ -1,6 +1,6 @@
 {
   "name": "miysortable-vue",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "sortable in vue",
   "main": "miysortable-vue/src/release.js",
   "scripts": {
