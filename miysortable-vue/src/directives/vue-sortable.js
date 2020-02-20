@@ -20,7 +20,7 @@ const directive = {
         newb.appendChild(tooltipElement);
         el.addEventListener('click', () => {
             if (vnode.context.sortableMaxIndex === undefined)
-                vnode.context.sortableMaxIndex = 0;
+                vnode.context.sortableMaxIndex = 1;
             if (binding.value === null || binding.value === undefined) {
                 callExpressionString(vnode.context, binding.expression, descValue, tooltipElement);
                 binding.value = descValue;
