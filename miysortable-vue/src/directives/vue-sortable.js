@@ -12,28 +12,34 @@ const directive = {
         const ascValue = binding.modifiers.enum === true ? sortableEnum.asc.value : sortableEnum.asc.title;
 
         el.classList.add('vue-sortable');
-        const newb = document.createElement('b');
-        el.appendChild(newb);
+        const control = document.createElement('div');
+        el.appendChild(control);
+        const upb = document.createElement('b');
+        const downb = document.createElement('b');
+        upb.classList.add('b-up');
+        downb.classList.add('b-down');
+        control.appendChild(upb);
+        control.appendChild(downb);
         const tooltipElement = document.createElement('span');
         tooltipElement.classList.add('tooltiptext');
         tooltipElement.style.visibility = 'hidden';
-        newb.appendChild(tooltipElement);
+        control.appendChild(tooltipElement);
         el.addEventListener('click', () => {
             if (vnode.context.sortableMaxIndex === undefined)
                 vnode.context.sortableMaxIndex = 1;
             if (binding.value === null || binding.value === undefined) {
                 callExpressionString(vnode.context, binding.expression, descValue, tooltipElement);
                 binding.value = descValue;
-                newb.classList.add('b-down');
+                downb.classList.add('active');
             } else if (binding.value === descValue) {
                 callExpressionString(vnode.context, binding.expression, ascValue, tooltipElement);
                 binding.value = ascValue;
-                newb.classList.remove('b-down');
-                newb.classList.add('b-up');
+                downb.classList.remove('active');
+                upb.classList.add('active');
             } else if (binding.value === ascValue) {
                 callExpressionString(vnode.context, binding.expression, null);
                 binding.value = null;
-                newb.classList.remove('b-up');
+                upb.classList.remove('active');
             }
 
             if (binding.modifiers.tooltip === true) {

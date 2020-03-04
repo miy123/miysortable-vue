@@ -4,7 +4,7 @@
       <thead>
         <tr>
           <th>id</th>
-          <th v-sortable:search.tooltip="sort.sex">sex</th>
+          <th v-sortable:search.tooltip="sort.sex">seeeeex</th>
           <th v-sortable:search.tooltip="sort.name">name</th>
         </tr>
       </thead>
@@ -28,26 +28,40 @@
   position: relative;
 }
 
+.vue-sortable  div{
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+
 .vue-sortable .b-down {
-  border-color: #000000 #fff #fff;
+  border-color: #4d494962 #fff #fff;
   border-style: solid;
   border-width: 4px;
   position: absolute;
-  top: 7px;
+  top: 12px;
+}
+
+.vue-sortable .b-down.active{
+    border-color:#000000c2 #fff #fff;
 }
 
 .vue-sortable .b-up {
-  border-color: #fff #fff #000000;
+  border-color: #fff #fff #4d494962;
   border-style: solid;
   border-width: 4px;
   position: absolute;
-  top: 7px;
+  top: 0px;
+}
+
+.vue-sortable .b-up.active{
+    border-color: #fff #fff #000000c2;
 }
 
 .vue-sortable .tooltiptext {
   font-size: 1px;
-  left: 5px;
-  top: -9px;
+  right: 6px;
+  top: 2px;
   width: 15px;
   background-color: rgb(82, 72, 72);
   color: #fff;
